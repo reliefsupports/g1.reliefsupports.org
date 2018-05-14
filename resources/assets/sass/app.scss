@@ -1,0 +1,87 @@
+
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Abhaya+Libre:400,700);
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "node_modules/bootstrap-sass/assets/stylesheets/bootstrap";
+
+//flat-ui
+@import "resources/assets/css/flat-ui";
+
+// styles from master.blade
+body {
+	font-family: 'Abhaya Libre', serif;
+	padding-top: 95px;
+}
+
+.main-container {
+    min-height: 600px;
+}
+
+footer {
+    margin-top: 80px;
+    color: #666;
+}
+
+//custom
+.hero {
+	h3 {
+		margin-top: 0;
+	}
+	p {
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
+	@media (max-width: 480px) {
+		.btn {
+			+.btn {
+				margin-top: 10px;
+			}
+		}
+	}
+}
+
+//responsive tables
+@media (max-width: 480px) {
+	#needs-table, #donations-table { 
+		border: 0;
+		thead { display: none; }
+		tbody {
+			tr {
+				th {
+					display: block;
+					line-height: 1.2;
+					border: none;
+				}
+				td { 
+					display: block;
+					line-height: 1.2;
+					border: solid #ddd;
+					border-width: 1px 1px 0;
+					&:last-child {
+						border-bottom-width: 1px;
+						margin-bottom: 10px;
+					}
+					&:before {
+					    display: block;
+					    font-size: 80%;
+					    color: #666;
+						content: attr(data-xs-label);
+					}
+				}
+			}
+		}
+	}
+	.btn-mobile-block {
+	    white-space: normal;
+	}
+
+	//footer mobile fix 
+	.footer-banner {
+		margin-left: 0;
+	}
+}
