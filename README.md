@@ -1,2 +1,29 @@
-# reliefsupports.org-gov
-Relief Supports is an open source project to support volunteers who working in relief activities.  reliefsupports.org-gov is exclusively for management of disaster relief work by goverment officials.
+# reliefsupports
+
+## How to setup locally.
+
+* Clone the repo.
+* Rename `.env.example` file as `.env`
+
+### Docker
+
+* Install Docker on your computer
+* Run following commands accordingly
+
+```
+docker-compose build
+docker-compose up -d
+docker exec -it floodlk_php_1 bash
+composer update
+
+chmod 777 -R storage/
+chmod 777 bootstrap/cache 
+```
+
+### On WAMP / XAMPP or other server
+
+```
+composer update
+chmod 777 -R storage/
+chmod 777 bootstrap/cache
+```

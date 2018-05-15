@@ -11,8 +11,6 @@
 |
 */
 
-Auth::routes();
-
 Route::get('/', 'HomeController@index');
 
 Route::get('/donations', 'DonationController@index');
@@ -30,9 +28,10 @@ Route::get('/emergency-contacts', 'HomeController@emergency');
 Route::get('/twitter-feed', 'FeedsController@index');
 
 Route::get('/entry/{type}/{id}', 'EntryController@view');
-Route::post('/search-donations-needs', 'HomeController@searchDonationsOrNeeds');
 
-Route::get('/camps', 'CampController@index');
-Route::get('/camps/add', 'CampController@add');
-Route::post('/camps/add', 'CampController@save');
-Route::get('/camps/show/{id}', 'CampController@show');
+Route::get('/locale/{locale}', function($locale){
+     App::setLocale($locale);
+     session(['locale' => $locale]);
+     return redirect('/');
+});
+Route::post('/search-donations-needs', 'HomeController@searchDonationsOrNeeds');
