@@ -22,6 +22,7 @@ class HomeController extends Controller
     {
         $this->donation = $donationRepository;
         $this->need = $needsRepository;
+        $this->middleware('auth');
     }
 
     /**
