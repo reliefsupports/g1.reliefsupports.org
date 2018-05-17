@@ -11,6 +11,8 @@
 |
 */
 
+Auth::routes();
+
 Route::get('/', 'HomeController@index');
 
 Route::get('/donations', 'DonationController@index');
