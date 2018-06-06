@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Http\Request;
-use App\Repositories\NeedsRepository;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,6 +12,11 @@ use App\Repositories\NeedsRepository;
 | is assigned the "api" middleware group. Enjoy building your API!
 |
 */
+
+Route::middleware('auth:api')->get('/user', function (Request $request) {
+    return $request->user();
+});
+
 
 Route::get('/v1/entry/needs', 'NeedsController@get');
 Route::post('/v1/entry/needs', 'NeedsController@post');

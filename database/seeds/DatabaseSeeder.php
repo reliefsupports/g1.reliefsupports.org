@@ -5,13 +5,13 @@ use Illuminate\Database\Seeder;
 class DatabaseSeeder extends Seeder
 {
     /**
-     * Run the database seeds.
+     * Seed the application's database.
      *
      * @return void
      */
     public function run()
     {
-        DB::table('donations')->insert(
+    	DB::table('donations')->insert(
             [
                 'name' => "ටෙස්ට් donation 1",
                 'telephone' => "0700001110000",
@@ -47,8 +47,7 @@ class DatabaseSeeder extends Seeder
                 'heads' => "23",
             ]
         );
-
-
+        
         // $this->call(UsersTableSeeder::class);
     }
 }
