@@ -1,0 +1,240 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Relief Support Postman",
+		"_postman_id": "1de619cc-6e97-884e-80c7-174978769ceb",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "RequestToken",
+			"request": {
+				"url": "http://localhost:8000/oauth/token",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "grant_type",
+							"value": "password",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "client_id",
+							"value": "2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "client_secret",
+							"value": "WxhI4u6XylGpHiuk8badPLpVe0lvO4DufZi4fdND",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "username",
+							"value": "api@reliefsupports.org",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "zaq1@WSXCDE#",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getNeeds",
+			"request": {
+				"url": "http://localhost:8000/api/v1/entry/needs",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg5MjNmMjlkYmUyZWEzY2UzOTZiMDQ2YWQ3MDM5YmM5NGM4YzYzODdhNjE1ODJjYmZkNmZkODE4MmQwNzYwZjg0YTY5NzAzMjgwMTk5MmU2In0.eyJhdWQiOiIyIiwianRpIjoiODkyM2YyOWRiZTJlYTNjZTM5NmIwNDZhZDcwMzliYzk0YzhjNjM4N2E2MTU4MmNiZmQ2ZmQ4MTgyZDA3NjBmODRhNjk3MDMyODAxOTkyZTYiLCJpYXQiOjE1MjgyNzEzNDAsIm5iZiI6MTUyODI3MTM0MCwiZXhwIjoxNTU5ODA3MzQwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.P4HuuHCec_tkH1lkTXesvaSdsNDFDDz3iWM0JvWUZnRljPgSojMBEdS9i71VFefXin4mUoAwiEc_3nSvoHsxrCy0ihxyUD7HVlgwWzKewn4JVCS2kZCOivzj4z10bhUaEXZo0zRugruWt1Suxd7CurtCnwfzCH3ISdAcJajpSoJRrGKqNlLFN9VDPNAOrgzbG2C2Ribk6I6ZSuAmkVHddXu3Q0jmUvQLW__cISQ9n4b_QZkgsl9cdnZUrwIeDm_lqiYgo1R6F13gC0F-guQC2gdTx9eUcQhDrF-33N2lpnACcsqGH8PmlkEy_fdRKMwG-CLyrysRZS5VrEHMTQf6n9KukeUxG-POfNsh7gM7ZHYd57y82RzF5P6U5l-759A0Qcp7rF-okqVsUFX8VH19ZYr1Yc0jxQAg1vh2psmnyeHi_o0lJjkevM9nAefkgIoi9eHm56U1_gMQSmZr60z5ZaPtstZEWZIkYPHwbhRxDlpISzAT5HeOSmN1SLSyWYu825L_3lDn1guTuXdjkTIHhE2kxHVoj7kninoy71yPISMjPKMpMfPXKFh2Kf7jIm3FLRi7Ff_HnhpLTzlsZzn8f6JWGmuZ5rRQJs9HN6swk8-bIHpZRnLA9dCqUVholZr5yrsE73_Jgq7YNJL-QvEoxv91jXcQiPt-q4eVxOB-Lbo",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "getDonations",
+			"request": {
+				"url": "http://localhost:8000/api/v1/entry/donations",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg5MjNmMjlkYmUyZWEzY2UzOTZiMDQ2YWQ3MDM5YmM5NGM4YzYzODdhNjE1ODJjYmZkNmZkODE4MmQwNzYwZjg0YTY5NzAzMjgwMTk5MmU2In0.eyJhdWQiOiIyIiwianRpIjoiODkyM2YyOWRiZTJlYTNjZTM5NmIwNDZhZDcwMzliYzk0YzhjNjM4N2E2MTU4MmNiZmQ2ZmQ4MTgyZDA3NjBmODRhNjk3MDMyODAxOTkyZTYiLCJpYXQiOjE1MjgyNzEzNDAsIm5iZiI6MTUyODI3MTM0MCwiZXhwIjoxNTU5ODA3MzQwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.P4HuuHCec_tkH1lkTXesvaSdsNDFDDz3iWM0JvWUZnRljPgSojMBEdS9i71VFefXin4mUoAwiEc_3nSvoHsxrCy0ihxyUD7HVlgwWzKewn4JVCS2kZCOivzj4z10bhUaEXZo0zRugruWt1Suxd7CurtCnwfzCH3ISdAcJajpSoJRrGKqNlLFN9VDPNAOrgzbG2C2Ribk6I6ZSuAmkVHddXu3Q0jmUvQLW__cISQ9n4b_QZkgsl9cdnZUrwIeDm_lqiYgo1R6F13gC0F-guQC2gdTx9eUcQhDrF-33N2lpnACcsqGH8PmlkEy_fdRKMwG-CLyrysRZS5VrEHMTQf6n9KukeUxG-POfNsh7gM7ZHYd57y82RzF5P6U5l-759A0Qcp7rF-okqVsUFX8VH19ZYr1Yc0jxQAg1vh2psmnyeHi_o0lJjkevM9nAefkgIoi9eHm56U1_gMQSmZr60z5ZaPtstZEWZIkYPHwbhRxDlpISzAT5HeOSmN1SLSyWYu825L_3lDn1guTuXdjkTIHhE2kxHVoj7kninoy71yPISMjPKMpMfPXKFh2Kf7jIm3FLRi7Ff_HnhpLTzlsZzn8f6JWGmuZ5rRQJs9HN6swk8-bIHpZRnLA9dCqUVholZr5yrsE73_Jgq7YNJL-QvEoxv91jXcQiPt-q4eVxOB-Lbo",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "insertNeed",
+			"request": {
+				"url": "http://localhost:8000/api/v1/entry/needs",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg5MjNmMjlkYmUyZWEzY2UzOTZiMDQ2YWQ3MDM5YmM5NGM4YzYzODdhNjE1ODJjYmZkNmZkODE4MmQwNzYwZjg0YTY5NzAzMjgwMTk5MmU2In0.eyJhdWQiOiIyIiwianRpIjoiODkyM2YyOWRiZTJlYTNjZTM5NmIwNDZhZDcwMzliYzk0YzhjNjM4N2E2MTU4MmNiZmQ2ZmQ4MTgyZDA3NjBmODRhNjk3MDMyODAxOTkyZTYiLCJpYXQiOjE1MjgyNzEzNDAsIm5iZiI6MTUyODI3MTM0MCwiZXhwIjoxNTU5ODA3MzQwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.P4HuuHCec_tkH1lkTXesvaSdsNDFDDz3iWM0JvWUZnRljPgSojMBEdS9i71VFefXin4mUoAwiEc_3nSvoHsxrCy0ihxyUD7HVlgwWzKewn4JVCS2kZCOivzj4z10bhUaEXZo0zRugruWt1Suxd7CurtCnwfzCH3ISdAcJajpSoJRrGKqNlLFN9VDPNAOrgzbG2C2Ribk6I6ZSuAmkVHddXu3Q0jmUvQLW__cISQ9n4b_QZkgsl9cdnZUrwIeDm_lqiYgo1R6F13gC0F-guQC2gdTx9eUcQhDrF-33N2lpnACcsqGH8PmlkEy_fdRKMwG-CLyrysRZS5VrEHMTQf6n9KukeUxG-POfNsh7gM7ZHYd57y82RzF5P6U5l-759A0Qcp7rF-okqVsUFX8VH19ZYr1Yc0jxQAg1vh2psmnyeHi_o0lJjkevM9nAefkgIoi9eHm56U1_gMQSmZr60z5ZaPtstZEWZIkYPHwbhRxDlpISzAT5HeOSmN1SLSyWYu825L_3lDn1guTuXdjkTIHhE2kxHVoj7kninoy71yPISMjPKMpMfPXKFh2Kf7jIm3FLRi7Ff_HnhpLTzlsZzn8f6JWGmuZ5rRQJs9HN6swk8-bIHpZRnLA9dCqUVholZr5yrsE73_Jgq7YNJL-QvEoxv91jXcQiPt-q4eVxOB-Lbo",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Siripala",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "telephone",
+							"value": "0712346666",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "No. 5/2 Galle Road, Kaluthara",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Kaluthara",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "needs",
+							"value": "Test Need",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "heads",
+							"value": "2",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "source",
+							"value": "mobile",
+							"description": "mobile or fbbot",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "geolocation",
+							"value": "38.8951 -77.0364",
+							"description": "latitude and longitude",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "insertDonation",
+			"request": {
+				"url": "http://localhost:8000/api/v1/entry/donations",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6Ijg5MjNmMjlkYmUyZWEzY2UzOTZiMDQ2YWQ3MDM5YmM5NGM4YzYzODdhNjE1ODJjYmZkNmZkODE4MmQwNzYwZjg0YTY5NzAzMjgwMTk5MmU2In0.eyJhdWQiOiIyIiwianRpIjoiODkyM2YyOWRiZTJlYTNjZTM5NmIwNDZhZDcwMzliYzk0YzhjNjM4N2E2MTU4MmNiZmQ2ZmQ4MTgyZDA3NjBmODRhNjk3MDMyODAxOTkyZTYiLCJpYXQiOjE1MjgyNzEzNDAsIm5iZiI6MTUyODI3MTM0MCwiZXhwIjoxNTU5ODA3MzQwLCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.P4HuuHCec_tkH1lkTXesvaSdsNDFDDz3iWM0JvWUZnRljPgSojMBEdS9i71VFefXin4mUoAwiEc_3nSvoHsxrCy0ihxyUD7HVlgwWzKewn4JVCS2kZCOivzj4z10bhUaEXZo0zRugruWt1Suxd7CurtCnwfzCH3ISdAcJajpSoJRrGKqNlLFN9VDPNAOrgzbG2C2Ribk6I6ZSuAmkVHddXu3Q0jmUvQLW__cISQ9n4b_QZkgsl9cdnZUrwIeDm_lqiYgo1R6F13gC0F-guQC2gdTx9eUcQhDrF-33N2lpnACcsqGH8PmlkEy_fdRKMwG-CLyrysRZS5VrEHMTQf6n9KukeUxG-POfNsh7gM7ZHYd57y82RzF5P6U5l-759A0Qcp7rF-okqVsUFX8VH19ZYr1Yc0jxQAg1vh2psmnyeHi_o0lJjkevM9nAefkgIoi9eHm56U1_gMQSmZr60z5ZaPtstZEWZIkYPHwbhRxDlpISzAT5HeOSmN1SLSyWYu825L_3lDn1guTuXdjkTIHhE2kxHVoj7kninoy71yPISMjPKMpMfPXKFh2Kf7jIm3FLRi7Ff_HnhpLTzlsZzn8f6JWGmuZ5rRQJs9HN6swk8-bIHpZRnLA9dCqUVholZr5yrsE73_Jgq7YNJL-QvEoxv91jXcQiPt-q4eVxOB-Lbo",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "name",
+							"value": "Siripala",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "telephone",
+							"value": "0712346666",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "address",
+							"value": "No. 5/2 Galle Road, Kaluthara",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "city",
+							"value": "Kaluthara",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "donation",
+							"value": "Water bottles",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "information",
+							"value": "This water bottles are being distributed to Rathnapura area",
+							"description": "",
+							"type": "text"
+						},
+						{
+							"key": "source",
+							"value": "mobile",
+							"description": "mobile or fbbot",
+							"type": "text"
+						},
+						{
+							"key": "status",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
