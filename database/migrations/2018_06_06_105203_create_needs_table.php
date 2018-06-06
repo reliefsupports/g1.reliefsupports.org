@@ -13,7 +13,7 @@ class CreateNeedsTable extends Migration
      */
     public function up()
     {
-        Schema::create('needs', function (Blueprint $table) {
+       Schema::create('needs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name',255);
             $table->string('telephone',255);

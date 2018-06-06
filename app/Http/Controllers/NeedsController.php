@@ -136,7 +136,7 @@ class NeedsController extends Controller
         // [TODO]
         // Add proper auth.
         $src = $request->input('source');
-        if ($src === 'fbbot') {
+        if ($src === 'fbbot' || $src === 'mobile') {
             if ( $this->need->addNeed($request->all()) ) {
                 $response['error'] = false;
             }

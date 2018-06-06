@@ -151,7 +151,7 @@ class DonationController extends Controller
         // [TODO]
         // Add proper auth.
         $src = $request->input('source');
-        if ($src === 'fbbot') {
+        if ($src === 'fbbot' || $src === 'mobile') {
             if ( $this->donation->addDonation($request->all()) ) {
                 $response['error'] = false;
             }            
